@@ -1,0 +1,10 @@
+[
+  { "id": "p1", "name": "Everyday Tote",  "category": "Bags",     "price": 68, "glyph": "👜", "c1": "#E8DCC8", "c2": "#C9B79C", "blurb": "Waxed canvas, leather handles, one honest pocket." },
+  { "id": "p2", "name": "Field Notebook", "category": "Paper",    "price": 14, "glyph": "📓", "c1": "#D8E2DC", "c2": "#A9C0B4", "blurb": "Lay-flat binding, 90gsm, dot grid." },
+  { "id": "p3", "name": "Ceramic Mug",    "category": "Home",     "price": 22, "glyph": "☕", "c1": "#E6D5CE", "c2": "#C9A99B", "blurb": "Hand-thrown, holds a generous pour." },
+  { "id": "p4", "name": "Merino Beanie",  "category": "Apparel",  "price": 38, "glyph": "🧶", "c1": "#DCD6E2", "c2": "#B3A6C7", "blurb": "Soft, warm, not itchy. Three colors." },
+  { "id": "p5", "name": "Brass Pen",      "category": "Desk",     "price": 29, "glyph": "🖊️", "c1": "#EDE3C8", "c2": "#D2BE85", "blurb": "Ages beautifully. Refillable forever." },
+  { "id": "p6", "name": "Linen Apron",    "category": "Home",     "price": 44, "glyph": "🥢", "c1": "#DDE3E6", "c2": "#A9BBC4", "blurb": "Stonewashed European linen, adjustable." },
+  { "id": "p7", "name": "Trail Bottle",   "category": "Outdoors", "price": 32, "glyph": "🍶", "c1": "#D6E2D9", "c2": "#9FBCAA", "blurb": "Insulated steel, keeps cold 24h." },
+  { "id": "p8", "name": "Card Wallet",    "category": "Bags",     "price": 48, "glyph": "💳", "c1": "#E5D9D2", "c2": "#BFA295", "blurb": "Vegetable-tanned leather, four slots." }
+]

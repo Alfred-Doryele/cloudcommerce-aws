@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CloudCommerce — Modern essentials</title>
+<meta name="description" content="CloudCommerce — a minimalist demo storefront, deployed on AWS." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <!-- announcement -->
+  <div class="bar">Free shipping over $75 · Deployed globally on AWS CloudFront</div>
+
+  <!-- header -->
+  <header class="site-head">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">◗</span> CloudCommerce
+    </a>
+    <nav class="site-nav">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#status" id="apiStatusLink">Status</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+      Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Demo storefront · capstone project</p>
+      <h1>Considered essentials,<br>quietly well made.</h1>
+      <p class="lede">A deliberately small catalog — the front end you’ll deploy to Amazon S3, serve through CloudFront, and later wire to a real API running on ECS Fargate.</p>
+      <a href="#shop" class="btn btn-primary">Browse the catalog</a>
+    </div>
+  </section>
+
+  <!-- shop -->
+  <section class="shop" id="shop">
+    <div class="shop-head">
+      <h2>The catalog</h2>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="grid" id="grid" aria-live="polite">
+      <!-- product cards injected by app.js -->
+      <div class="loading">Loading catalog…</div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <h2>Why this exists</h2>
+      <p>CloudCommerce isn’t a real shop — it’s the working front end for an AWS Solutions Architect capstone. It’s intentionally minimal so the interesting work is the <em>infrastructure</em> behind it: global delivery, a containerised API, purpose-built databases, an event-driven order pipeline, and a CI/CD pipeline that ships it all safely.</p>
+      <p class="muted">Start with the catalog you see here as static files in S3. By the end of the capstone, every “Add to cart” and “Checkout” will travel through a production-grade, multi-AZ architecture.</p>
+    </div>
+  </section>
+
+  <!-- status (teaches API wiring later) -->
+  <section class="status" id="status">
+    <div class="status-inner">
+      <div>
+        <h3>Backend connection</h3>
+        <p class="muted" id="statusText">Running in <b>static mode</b> — products are served from <code>data/products.json</code>. Set <code>API_BASE</code> in <code>assets/config.js</code> to point at your ALB once Lab 3 is done.</p>
+      </div>
+      <span class="status-pill" id="statusPill">● Static mode</span>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="site-foot">
+    <div class="foot-grid">
+      <div>
+        <span class="logo"><span class="logo-mark">◗</span> CloudCommerce</span>
+        <p class="muted">A capstone demo storefront. Not a real store; no orders are placed.</p>
+      </div>
+      <div class="foot-meta">
+        <span id="regionTag">Served from: edge cache</span>
+        <span>© <span id="yr"></span> CloudCommerce Labs</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- cart drawer -->
+  <div class="drawer-overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <h3>Your cart</h3>
+      <button class="x" id="closeCart" aria-label="Close cart">×</button>
+    </div>
+    <div class="drawer-body" id="cartItems">
+      <p class="empty">Your cart is empty.</p>
+    </div>
+    <div class="drawer-foot">
+      <div class="subtotal"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+      <button class="btn btn-primary full" id="checkoutBtn" disabled>Checkout</button>
+      <p class="checkout-note" id="checkoutNote"></p>
+    </div>
+  </aside>
+
+  <script src="assets/config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

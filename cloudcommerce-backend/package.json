@@ -1,0 +1,9 @@
+{
+  "name": "cloudcommerce-api",
+  "version": "1.0.0",
+  "description": "CloudCommerce catalog & orders API (zero-dependency).",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
